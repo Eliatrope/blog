@@ -1,0 +1,16 @@
+@media all and  (max-width:500px){
+	.containerprearticle article div:nth-child(2){
+		height:inherit;
+	}
+	.containerprearticle article div:nth-child(2) h5{
+		text-align:center;
+		float:inherit;
+	}
+	.containerprearticle article div:nth-child(2) p{
+		display:none;
+		height:0;
+	}
+	.containerprearticle article div:nth-child(4){
+		display:none;
+	}
+}

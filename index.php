@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	include_once('bo/connex.php');
 	
 	$sql='SELECT * FROM univers ORDER BY nom LIMIT 10';
@@ -23,12 +23,12 @@
 		<?php 
 			foreach($univers as $u){
 				echo 
-				'<a href=""><section class="containerlastwords">'.
+				'<a href="univers.php"><section class="containerlastwords">'.
 					'<article class="bigcontainerlastwords">'.
 						'<img src="asset/images/'.$u->image.'" alt="bg article"/>'.
-						'<a href="#"><h4>'.$u->nom.'</h4></a>'.
+						'<a href="univers.php"><h4>'.$u->nom.'</h4></a>'.
 					'</article>'.
-					'<a href="#"><h4>'.$u->nom.'</h4></a>'.
+					'<a href="univers.php"><h4>'.$u->nom.'</h4></a>'.
 				'</section></a>'
 				;
 			}

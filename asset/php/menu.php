@@ -1,4 +1,4 @@
-﻿<header class="header">
+<header class="header">
 	<div class="clickpop">
 		+
 	</div>
@@ -20,7 +20,7 @@
 				</div>
 			</article>
 			<article>
-				<p>Jeux video</p>
+				<p>Jeu video</p>
 				<div>
 					<img alt="Jeux vidéo" src="asset/images/menu/jeuxvideo.jpg"/>
 				</div>

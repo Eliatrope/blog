@@ -215,7 +215,7 @@ a{
 	background-repeat:no-repeat;
 	background-position:center;
 	width:30px;
-	height:34px;
+	height:38px;
 	border-right:0;
 	border-top:1px solid #373737;
 	border-left:1px solid #373737;
@@ -278,4 +278,66 @@ a{
 	line-height:40px;
 	top:-20px;right:-20px;
 	cursor:pointer;
+}
+/****************************************
+/			Style univers.php			/
+/***************************************/
+.containerprearticle{
+	width:100%;
+}
+.containerprearticle article{
+	width:100%;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+	align-items:center;
+}
+.containerprearticle article div:nth-child(1){
+	width:150px;
+}
+.containerprearticle article div:nth-child(1) img{
+	width:100%;
+	float:right;
+}
+.containerprearticle article div:nth-child(2){
+	width:85%;
+	height:150px;
+}
+/*Article preview*/
+.containerprearticle a{
+	color:black;
+}
+.containerprearticle article div:nth-child(2) h5{
+	float:left;
+	font-family:Lora;
+	font-size:24px;
+	margin:0 0 3px 0;
+}
+.containerprearticle article div:nth-child(2) p{
+	font-family:Lora;
+	font-size:20px;
+	margin:16px 0 0 0;
+	text-align:justify;
+	height:123px;
+	overflow:hidden;
+}
+.voidbait{
+	width:150px;
+}
+.containerprearticle article div:nth-child(4){
+	width:85%;
+	height:20px;
+}
+.containerprearticle article div:nth-child(4) p{
+	font-size:16px;
+	font-family:Lora;
+	margin:15px 0 0 0;
+	float:left;
+}
+.containerprearticle article div:nth-child(4) a{
+	display:block;
+	float:right;
+	margin-top:15px;
+	color:black;
+	font-weight:bold;
 }
