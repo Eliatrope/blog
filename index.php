@@ -46,7 +46,7 @@
 				'</section>';
 			}*/
 		?>
-		<!--<section class="containerviewmorevignette">
+		<section class="containerviewmorevignette">
 			<div>
 				<a href="#"><img src="asset/images/hp/vignettebioshock.png" alt="Vignette de l'univers Bioshock"/>
 				<h5>Bioshock</h5></a>
@@ -59,7 +59,7 @@
 				<a href="#"><img src="asset/images/hp/vignettetlous.png" alt="Vignette de l'univers Bioshock"/>
 				<h5>The Last of Us</h5></a>
 			</div>
-		</section>-->
+		</section>
 		
 		<!--On a try la forme blason...
 		<section class="testblason">
