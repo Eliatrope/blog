@@ -57,7 +57,7 @@
 					<?php
 						foreach($articles as $a){
 							echo
-								'<a href=""><h5>'.$a->nom.'</h5></a><br />'
+								'<a href="article.php"><h5>'.$a->nom.'</h5></a><br />'
 							;
 							$idtype = $a->fk_id_type;
 							if($idtype == 2){
@@ -83,7 +83,7 @@
 							echo '</p>';
 						}
 					?>
-					<a href="">En lire davantage</a>
+					<a href="article.php">En lire davantage</a>
 				</div>
 					<?php
 						}
