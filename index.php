@@ -1,9 +1,8 @@
 <?php
-	include_once('bo/connex.php');
+	require_once('bo/config.php');
 	
-	$sql='SELECT * FROM univers ORDER BY nom LIMIT 10';
-	$resultats= $connexion->query($sql);
-	$univers = $resultats->fetchAll(PDO::FETCH_OBJ);
+	$function = new functions();
+	$univers = $function->select("SELECT * FROM univers ORDER BY id LIMIT 10");
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -26,9 +25,9 @@
 				'<a href="univers.php"><section class="containerlastwords">'.
 					'<article class="bigcontainerlastwords">'.
 						'<img src="asset/images/'.$u->image.'" alt="bg article"/>'.
-						'<a href="univers.php"><h4>'.$u->nom.'</h4></a>'.
+						'<a href="univers.php?u='.$u->id.'"><h4>'.$u->nom.'</h4></a>'.
 					'</article>'.
-					'<a href="univers.php"><h4>'.$u->nom.'</h4></a>'.
+					'<a href="univers.php?u='.$u->id.'"><h4>'.$u->nom.'</h4></a>'.
 				'</section></a>'
 				;
 			}

@@ -1,15 +1,12 @@
 <?php
-	include_once('bo/connex.php');
+	include_once('bo/config.php');
 	
-	$sql='SELECT * FROM univers ORDER BY nom LIMIT 1';
-	$resultats= $connexion->query($sql);
-	$univers = $resultats->fetchAll(PDO::FETCH_OBJ);
+	$universid = filter_var($_GET['u'], FILTER_SANITIZE_NUMBER_INT);
+
+	$function = new functions();
 	
-	//Requête à modifier, on doit récup' les données liées à l'univers en question(ici, pour l'exemple, Bioshock)
-	
-	$sql='SELECT * FROM articles WHERE fk_id_cate = 2 AND fk_id_univ = 2'; //Ici je pense qu'il faudra ordonner par date(plus récent au moins)
-	$resultat = $connexion->query($sql);
-	$articles = $resultat->fetchAll(PDO::FETCH_OBJ);
+	$univers = $function->select("SELECT * FROM univers WHERE id = '$universid'");
+	$articles = $function->select("SELECT * FROM articles WHERE fk_id_univ = '$universid'");
 	
 ?>
 <!DOCTYPE HTML>
@@ -46,10 +43,13 @@
 			<article>
 				<div>
 					<?php
-						foreach($univers as $u){
-							echo 
-								'<img src="asset/images/'.$u->blason.'" alt="'.$u->nom.'" title="Article de '.$u->nom.'"/>'
-							;
+						if(count($articles) > 0)
+						{
+							foreach($univers as $u){
+								echo 
+									'<img src="asset/images/'.$u->blason.'" alt="'.$u->nom.'" title="Article de '.$u->nom.'"/>'
+								;
+							}
 						}
 					?>
 				</div>
