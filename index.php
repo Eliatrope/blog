@@ -22,7 +22,7 @@
 		<?php 
 			foreach($univers as $u){
 				echo 
-				'<a href="univers.php"><section class="containerlastwords">'.
+				'<a href="univers.php"><section class="containerlastwords" id="'.$u->id.'">'.
 					'<article class="bigcontainerlastwords">'.
 						'<img src="asset/images/'.$u->image.'" alt="bg article"/>'.
 						'<a href="univers.php?u='.$u->id.'"><h4>'.$u->nom.'</h4></a>'.
@@ -33,9 +33,10 @@
 			}
 		?>
 		<p class="viewmoreindex">View More
-		<br /><img src="asset/images/viewmore.png" alt="View More"/></p>
+		<br /><img src="asset/images/viewmore.png" alt="View More" id="viewmore"/></p>
 		
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/menu.js"></script>
+		<script src="js/viewmore.js"></script>
 	</body>
 </html>
