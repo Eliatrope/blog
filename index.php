@@ -32,38 +32,9 @@
 				;
 			}
 		?>
-		<!--Vignettes ++-->
-		<?php 
-			/*foreach($univers as $u){
-				echo 
-				'<section class="containerlastwords">'.
-					'<article class="bigcontainerlastwords">'.
-						'<img src="asset/images/'.$u->image.'" alt="bg article"/>'.
-						'<a href="#"><h4>'.$u->nom.'</h4></a>'.
-					'</article>'.
-					'<a href="#"><h4>'.$u->nom.'</h4></a>'.
-				'</section>';
-			}*/
-		?>
-		<!--<section class="containerviewmorevignette">
-			<div>
-				<a href="#"><img src="asset/images/hp/vignettebioshock.png" alt="Vignette de l'univers Bioshock"/>
-				<h5>Bioshock</h5></a>
-			</div>
-			<div>
-				<a href="#"><img src="asset/images/hp/vignettedrakengard3.png" alt="Vignette de l'univers Bioshock"/>
-				<h5>Drakengard</h5></a>
-			</div>
-			<div>
-				<a href="#"><img src="asset/images/hp/vignettetlous.png" alt="Vignette de l'univers Bioshock"/>
-				<h5>The Last of Us</h5></a>
-			</div>
-		</section>-->
+		<p class="viewmoreindex">View More
+		<br /><img src="asset/images/viewmore.png" alt="View More"/></p>
 		
-		<!--On a try la forme blason...
-		<section class="testblason">
-			<div class="transformation"></div>
-		</section>-->
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/menu.js"></script>
 	</body>

@@ -56,6 +56,10 @@ a{
 	z-index:2;
 	background-color:black;
 }
+/*Je disable, par défaut, les article n+4*/
+.containerlastwords:nth-child(n+12){/*Il faut y aller de 3 en 3(1 section = 3 children).Si je veux add un article en plus, je mets n+15*/
+	display:none;
+}
 .bigcontainerlastwords img{
 	position:absolute;
 	left:0;
@@ -81,68 +85,16 @@ a{
 	font-size:100px;
 	font-weight:normal;
 }
-/********************--***************
-*Essayons de faire un blason ptdrmdr**
----**********************************/
-.testblason{
-	width:1200px;
-	height:2000px;
-	background-color:orange;
-	margin:0 auto 0 auto;
-}
-.transformation{
-	width:200px;
-	height:200px;
-	background-color:pink;
-	-webkit-transform:rotate(45deg);
-	border-bottom:250px solid green;
-	border-right:250px solid green;
-	
-	border-radius:0 10px 0 20px / 0 10px 0 20px;
-}
-/*Vignettes*/
-.containerviewmorevignette{
-	display:flex;/*Display à mettre impérativement pour que le navig' comprenne ce qu'il y a en dessous*/
-	flex-flow:row wrap;/*Permet de conserver le flottant sur les éléments... Enlève ça et tu auras le droit à une belle surprise :)*/
-	justify-content:space-around;/*Centre + prend en compte l'espace autour des éléments pour leur assigner des marges <3 équivalentes*/
-	align-items:center;/*Centre en haut*/
-	/*CONSULTER http://putaindecode.fr/posts/css/le-guide-complet-pour-centrer-en-css/ ET 
-	https://css-tricks.com/almanac/properties/f/flex-flow/
-	BIBLE DES ÉLÉMENTS CENTRÉS!*/
-}
-.containerviewmorevignette div{
-	width:320px;
-	height:320px;
-	position:relative;
-	float:left;
-	overflow:hidden;
-}
-.containerviewmorevignette div img{
-	position:absolute;
-	top:0;
-	left:0;
-	z-index:1;
-}
-.containerviewmorevignette div h5{
-	position:relative;
-	color:white;
-	line-height:320px;
+/*Bouton viewmore*/
+.viewmoreindex{
+	margin:60px 0 10px 0;
 	text-align:center;
-	margin:0;
-	z-index:2;
-	font-weight:normal;
+	font-size:60px;
+	font-family:Lora;
 }
-.containerviewmorevignette div:nth-child(1) h5{
-	font-family:Andes;
-	font-size:76px;
-}
-.containerviewmorevignette div:nth-child(2) h5{
-	font-family:Life;
-	font-size:57px;
-}
-.containerviewmorevignette div:nth-child(3) h5{
-	font-family:Bebas;
-	font-size:65px;
+.viewmoreindex img{
+	margin-top:15px;
+	cursor:pointer;
 }
 /*Style du nav/header et donc du menu.php*/
 .header div:nth-child(1){
