@@ -32,8 +32,8 @@
 				;
 			}
 		?>
-		<p class="viewmoreindex">View More
-		<br /><img src="asset/images/viewmore.png" alt="View More" id="viewmore"/></p>
+		<p id="viewmore" class="viewmoreindex">View More
+		<br /><img src="asset/images/viewmore.png" alt="View More" /></p>
 		
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/menu.js"></script>
