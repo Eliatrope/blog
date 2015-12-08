@@ -43,7 +43,7 @@
 				</p>
 				<figure>
 					<img src="asset/images/biblimedia/DOD3_Zero_CGI11.png" alt="<?php ?>" title="<?php ?>"/>
-					<div><span>+</span></div>
+					<figcaption><span>+</span></figcaption>
 				</figure>
 				<span class="littleresume">Rose, alias Zero</span>
 				<p>
