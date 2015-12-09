@@ -39,7 +39,8 @@
 				  	else if($diff < 3600) /* moins d'une heure */
 				   	return 'Il y a '.round($diff/60, 0).' minutes';
 				  	else if($diff < 10800) /* moins de 3 heures */
-				   	return 'Il y a '.round($diff/3600, 0).' heures';
+				   	return 'Il y a '.round($diff/3600, 0).' heure'.(round($diff/3600, 0) > 1 ? 's' : '');
+				   		
 				  	else /*  plus de 3 heures ont affiche ajourd'hui à HH:MM:SS */
 				   	return 'Aujourd\'hui à '.date('H:i:s', $date);
 				}
