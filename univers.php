@@ -3,10 +3,10 @@
 	
 	$universid = filter_var($_GET['u'], FILTER_SANITIZE_NUMBER_INT);
 
-	$function = new functions();
+	$dbFunctions = new dbFunctions();
 	
-	$univers = $function->select("SELECT * FROM univers WHERE id = '$universid'");
-	$articles = $function->select("SELECT * FROM articles WHERE fk_id_univ = '$universid'");
+	$univers = $dbFunctions->select("SELECT * FROM univers WHERE id = '$universid'");
+	$articles = $dbFunctions->select("SELECT * FROM articles WHERE fk_id_univ = '$universid'");
 	
 ?>
 <!DOCTYPE HTML>
@@ -57,7 +57,7 @@
 					<?php
 						foreach($articles as $a){
 							echo
-								'<a href="article.php"><h5>'.$a->nom.'</h5></a><br />'
+								'<a href="article.php?a='.$a->id.'"><h5>'.$a->nom.'</h5></a><br />'
 							;
 							$idtype = $a->fk_id_type;
 							if($idtype == 2){
