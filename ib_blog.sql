@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 03 Décembre 2015 à 21:51
+-- Généré le :  Mer 09 Décembre 2015 à 21:18
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
   `nom` varchar(255) NOT NULL,
   `content` text NOT NULL,
   `auteur` varchar(45) NOT NULL,
-  `date` varchar(255) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `heure` varchar(255) NOT NULL,
   `fk_id_cate` int(11) NOT NULL,
   `fk_id_univ` int(11) NOT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
 --
 
 INSERT INTO `articles` (`id`, `nom`, `content`, `auteur`, `date`, `heure`, `fk_id_cate`, `fk_id_univ`, `fk_id_type`, `fk_id_user`) VALUES
-(3, '“Can i go find a bush, I need to pee?”', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum porttitor neque, eu vulputate dui venenatis sit amet. Proin blandit, ante sed porttitor sollicitudin, nunc nunc vehicula arcu, non varius dui lacus eu enim. Pellentesque et risus porta, tincidunt dui vel, blandit nisi. Morbi luctus, dolor at sollicitudin facilisis, nisl orci ullamcorper nisl, non blandit diam sapien nec justo. Ut vehicula dui felis, ut rutrum ipsum venenatis ut. Aenean ligula augue, tempus vel lorem vitae, dictum consectetur velit. Fusce faucibus libero massa, id dignissim elit lobortis quis. In vitae auctor sapien. In sed feugiat nisl. Vestibulum elementum sapien eget dolor pharetra, at tempor enim laoreet.', 'BALLA', 'jeudi 03 décembre 2015', '21h00', 2, 2, 1, 1);
+(3, '“Can i go find a bush, I need to pee?”', '<h3>Zero, <span>Intoner</span> déchue</h3><!--Pas dynamique ici du fait que je n''ai pas enregistré ça dans la colonne content-->\r\n				<p>\r\n					<span>L</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum porttitor neque, eu vulputate dui venenatis sit amet. Proin blandit, ante sed porttitor sollicitudin, nunc nunc vehicula arcu, non varius dui lacus eu enim. Pellentesque et risus porta, tincidunt dui vel, blandit nisi. Morbi luctus, dolor at sollicitudin facilisis, nisl orci ullamcorper nisl, non blandit diam sapien nec justo. Ut vehicula dui felis, ut rutrum ipsum venenatis ut. Aenean ligula augue, tempus vel lorem vitae, dictum consectetur velit. Fusce faucibus libero massa, id dignissim elit lobortis quis. In vitae auctor sapien. In sed feugiat nisl. Vestibulum elementum sapien eget dolor pharetra, at tempor enim laoreet.				</p>\r\n				<figure>\r\n					<img src="asset/images/biblimedia/DOD3_Zero_CGI11.png" alt="" title=""/>\r\n					<figcaption><span>+</span></figcaption>\r\n				</figure>\r\n				<span class="littleresume">Rose, alias Zero</span>\r\n				<p>\r\n					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum porttitor neque, eu vulputate dui venenatis sit amet. Proin blandit, ante sed porttitor sollicitudin, nunc nunc vehicula arcu, non varius dui lacus eu enim. Pellentesque et risus porta, tincidunt dui vel, blandit nisi. Morbi luctus, dolor at sollicitudin facilisis, nisl orci ullamcorper nisl, non blandit diam sapien nec justo. Ut vehicula dui felis, ut rutrum ipsum venenatis ut. Aenean ligula augue, tempus vel lorem vitae, dictum consectetur velit. Fusce faucibus libero massa, id dignissim elit lobortis quis. In vitae auctor sapien. In sed feugiat nisl. Vestibulum elementum sapien eget dolor pharetra, at tempor enim laoreet.				</p>\r\n				<h3>\r\n					Alors, Mikhail ou Mickael ?\r\n				</h3>\r\n				<p>\r\n					<span>D</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum porttitor neque, eu vulputate dui venenatis sit amet. Proin blandit, ante sed porttitor sollicitudin, nunc nunc vehicula arcu, non varius dui lacus eu enim. Pellentesque et risus porta, tincidunt dui vel, blandit nisi. Morbi luctus, dolor at sollicitudin facilisis, nisl orci ullamcorper nisl, non blandit diam sapien nec justo. Ut vehicula dui felis, ut rutrum ipsum venenatis ut. Aenean ligula augue, tempus vel lorem vitae, dictum consectetur velit. Fusce faucibus libero massa, id dignissim elit lobortis quis. In vitae auctor sapien. In sed feugiat nisl. Vestibulum elementum sapien eget dolor pharetra, at tempor enim laoreet.				</p>\r\n', 'BALLA', '2015-12-09 18:56:22', '21h00', 2, 2, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `univers` (
   `fk_id_cate` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_id_cate_in_univers_idx` (`fk_id_cate`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Contenu de la table `univers`
@@ -131,9 +131,16 @@ CREATE TABLE IF NOT EXISTS `univers` (
 
 INSERT INTO `univers` (`id`, `nom`, `image`, `blason`, `fk_id_cate`) VALUES
 (1, 'Bioshock', 'univers/bioshock.jpg', 'univers/blason/bioshock.png', 2),
-(2, 'Drakengard', 'univers/drakengard.jpg', 'univers/blason/drakengard.jpg', 2),
+(2, 'Drakengard', 'univers/drakengard.jpg', 'univers/blason/drakengard.png', 2),
 (3, 'The Last of Us', 'univers/thelastofus.jpg', 'univers/blason/thelastofus.png', 2),
-(4, 'Mirror&rsquo;s Edge', 'univers/mirrorsedge.jpg', 'univers/blason/mirrorsedge.png', 2);
+(4, 'Mirror&rsquo;s Edge', 'univers/mirrorsedge.jpg', 'univers/blason/mirrorsedge.png', 2),
+(5, 'American Horror Story', 'univers/americanhorrorstory.jpg', 'univers/blason/americanhorrorstory.png', 5),
+(6, 'American Horror Story', 'univers/americanhorrorstory.jpg', 'univers/blason/americanhorrorstory.png', 5),
+(7, 'Bioshock', 'univers/bioshock.jpg', 'univers/blason/bioshock.png', 2),
+(8, 'Drakengard', 'univers/drakengard.jpg', 'univers/blason/drakengard.png', 2),
+(9, 'The Last of Us', 'univers/thelastofus.jpg', 'univers/blason/thelastofus.png', 2),
+(10, 'Mirror&rsquo;s Edge', 'univers/mirrorsedge.jpg', 'univers/blason/mirrorsedge.png', 2),
+(11, 'Bioshock', 'univers/bioshock.jpg', 'univers/blason/bioshock.png', 2);
 
 -- --------------------------------------------------------
 
