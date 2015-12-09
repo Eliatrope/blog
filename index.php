@@ -1,7 +1,7 @@
 <?php
 	require_once('bo/config.php');
 	
-	$function = new functions();
+	$function = new dbFunctions();
 	$univers = $function->select("SELECT * FROM univers ORDER BY id LIMIT 10");
 ?>
 <!DOCTYPE HTML>

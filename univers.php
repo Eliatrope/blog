@@ -66,7 +66,7 @@
 								
 							}
 							echo
-								'<p>'.$a->content.'</p>'
+								'<p>'.strip_tags($a->content).'</p>'
 							;
 						
 					?>
