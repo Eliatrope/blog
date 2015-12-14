@@ -1,3 +1,6 @@
+<div class="connexption">
+	<p><span>S'inscrire</span> | <span>Connexion</span></p>
+</div>
 <header class="header">
 	<div class="clickpop">
 		+

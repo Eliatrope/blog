@@ -32,6 +32,21 @@
          url('../fonts/Rose/rosecaps-webfont.ttf') format('truetype'),
          url('../fonts/Rose/rosecaps-webfont.svg#rosecaps') format('svg');
 }
+/*Modif' scrollbar*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(24,24,24,.7); 
+    border-radius: 10px;
+	background-color:rgba(255,255,255,.7);
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(24,24,24,.5); 
+}
 .cb{
 	clear:both;
 }
@@ -148,6 +163,32 @@ a{
 	z-index:999;
 	top:20%;
 }
+/*Area inscription/connexion/admin/profil*/
+.connexption{
+	position:fixed;
+	z-index:1001;
+	width:180px;
+	height:25px;
+	top:0;
+	right:5%;
+	border-bottom:3px solid #181818;
+	border-left:3px solid #181818;
+	border-right:3px solid #181818;
+	background-color:black;
+	margin:auto;
+}
+.connexption p{
+	margin:0 auto 0 auto;
+	line-height:25px;
+	color:white;
+	font-family:Lora;
+	font-size:16px;
+	text-align:center;
+	
+}
+.connexption p span{
+	cursor:pointer;
+}
 .nav form legend{
 	font-family:Lora;
 	margin:4px auto 0 auto;
@@ -225,7 +266,7 @@ a{
 	position:absolute;
 	margin:0;
 }
-.nav div:nth-child(3){
+.closemoi{
 	position:absolute;
 	width:40px;
 	height:40px;
@@ -237,7 +278,7 @@ a{
 	border:1px solid #181818;
 	font-size:20px;
 	line-height:40px;
-	top:-20px;right:-20px;
+	top:-20px;right:-5px;
 	cursor:pointer;
 }
 /****************************************
