@@ -1,5 +1,5 @@
 <div class="connexption">
-	<p><span>S'inscrire</span> | <span>Connexion</span></p>
+	<p><span class="register">S'inscrire</span> | <span class="login">Connexion</span></p>
 </div>
 <header class="header">
 	<div class="clickpop">

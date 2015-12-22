@@ -9,4 +9,14 @@ $(document).ready(function(){
 		$(".nav").fadeOut("fast");
 		$(".clickpop").fadeIn("slow");
 	});
+	/*Sidebar*/
+	$('.register').click(function(){
+		$('.logisfil').fadeIn('fast');
+	});
+	$('.login').click(function(){
+		$('.logisfil').fadeIn('fast');
+	});
+	$('.closelogisfil').click(function(){
+		$('.logisfil').fadeOut('fast');
+	});
 });

@@ -160,7 +160,7 @@ a{
 	border-top:3px solid #181818;border-bottom:3px solid #181818;
 	background-color:black;
 	position:fixed;
-	z-index:999;
+	z-index:9999;
 	top:20%;
 }
 /*Area inscription/connexion/admin/profil*/
@@ -439,4 +439,91 @@ a{
 	font-family:Lora;
 	font-size:14px;
 	margin-bottom:25px;
+}
+/********************************************
+*		Style de logisfil(La sidebar)		*
+********************************************/
+.logisfil{
+	width:200px;
+	height:100%;
+	position:fixed;
+	background-color:black;
+	left:0;
+	top:0;
+	border-right:8px solid #181818;
+	z-index:9998;
+	display:none;
+}
+.closelogisfil{
+	position:absolute;
+	width:40px;
+	height:40px;
+	background-color:black;
+	color:white;
+	font-family:Andes;
+	text-align:center;
+	border-radius:40px;
+	border:1px solid #181818;
+	font-size:20px;
+	line-height:40px;
+	top:-10px;right:-25px;
+	cursor:pointer;
+}
+.containeravatarlogisfil{
+	width:198px;
+	height:198px;
+	overflow:hidden;
+	border:1px solid #181818;
+	border-radius:198px;
+	padding:0;
+	margin:auto;
+	position:relative;
+}
+.containeravatarlogisfil img{
+	width:200px;
+	position:absolute;
+	z-index:-1;
+}
+.containeravatarlogisfil span{
+	position:absolute;
+	bottom:15px;
+	left:24%;
+	color:white;
+	font-family:Lora;
+	font-size:14px;
+	font-style:italic;
+	text-shadow:1px 1px 1px rgba(0,0,0,.7);
+	cursor:pointer;
+	z-index:2;
+}
+.containeravatarlogisfil:hover figcaption{
+	opacity:1;
+	margin-top:0;
+}
+.containeravatarlogisfil figcaption{
+	z-index:1;
+	width:198px;
+	height:198px;
+	background-color:rgba(0,0,0,.7);
+	opacity:0;
+	margin-top:200px;
+	transition:all .7s;
+	text-align:center;
+	color:white;
+}
+.containeravatarlogisfil figcaption h5{
+	padding-top:35%;
+	margin:0;
+	font-family:Bebas;
+	font-weight:normal;
+	font-size:48px;
+	width:200px;
+}
+.containeravatarlogisfil figcaption p{
+	margin-top:-10px;
+	margin-bottom:0;
+	font-family:Lora;
+	font-style:italic;
+	font-size:14px;
+	width:200px;
 }
