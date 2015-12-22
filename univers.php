@@ -23,6 +23,7 @@
 	<body>
 		<?php 
 			include_once('asset/php/menu.php');
+			include_once('asset/php/logisfil.php');
 		?>
 		<?php 
 			foreach($univers as $u){

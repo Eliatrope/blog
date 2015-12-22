@@ -24,6 +24,7 @@
 	<body>
 		<?php 
 			include_once('asset/php/menu.php');
+			include_once('asset/php/logisfil.php');
 		?>
 			<h2 class="titlearticle"><?php echo $article[0]->nom;?></h2>
 			<div class="containerinfoart">
