@@ -194,6 +194,7 @@ a{
 	font-family:Lora;
 	margin:4px auto 0 auto;
 	color:white;
+	text-align:center;
 }
 .nav form div:nth-child(2){
 	width:50%;
