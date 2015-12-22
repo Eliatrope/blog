@@ -162,6 +162,7 @@ a{
 	position:fixed;
 	z-index:9999;
 	top:20%;
+	display:none;
 }
 /*Area inscription/connexion/admin/profil*/
 .connexption{
