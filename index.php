@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require_once('bo/config.php');
 	
 	$function = new dbFunctions();
@@ -20,6 +21,7 @@
 			include_once('asset/php/logisfil.php');
 		?>
 		<h2 class="hugecatetitle">Last wor(l)ds</h2>
+		<h4 style='text-align:center;color:red;'><?php if(isset($_SESSION['error'])){ echo $_SESSION['error']; unset($_SESSION['error']); } ?></h4>
 		<?php 
 			foreach($univers as $u){
 				echo 

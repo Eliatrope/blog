@@ -1,23 +1,28 @@
 ﻿$(document).ready(function(){
 	$(".clickpop").click(function(){
-		$(".clickpop").fadeOut("fast");
-		$(".nav").fadeIn("slow");
+		$(this).hide();
+		$(".nav").fadeIn();
 	});
 
 	$(".closemoi").click(function(){
-		$(".nav").fadeOut("fast");
-		$(".clickpop").fadeIn("slow");
+		$(".nav").hide();
+		$(".clickpop").fadeIn();
 	});
 	/*Sidebar*/
-	$('.register').click(function(){
-		$('.logisfil').fadeIn('fast');
+	$('.register, .login').click(function(){
+		if($('.logisfil').is(':hidden'))
+		{
+			$('.logisfil').fadeIn();
+		}
 	});
-	$('.login').click(function(){
-		$('.logisfil').fadeIn('fast');
+	$(document.body).mousedown(function(event){
+    	var target = $(event.target);
+	    if (!target.parents().andSelf().is('.logisfil')) {
+	        $(".logisfil").fadeOut();
+	    }
 	});
-	/*Ici, dès qu'on clique autre part que dans le container, faut que le .logisfil se fadeOut*/
 	
-	
+
 	/*Pour le hover + click de chaque élément de la liste, faut faire la même anim' qu'en css => 
 	
 	.logisfil ul li:hover{
@@ -31,3 +36,8 @@
 	/*Si possible, générer un scroll pour tous les éléments qu'on ne voit pas...*/
 
 });
+
+function logout()
+{
+	location.href = 'asset/php/logout.php';
+}

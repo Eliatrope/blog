@@ -9,6 +9,28 @@
 			$query->execute();
 			return $query->fetchAll(PDO::FETCH_OBJ);
 		}
+		public function login($username, $password)
+		{
+			$query = $this->conn->prepare("SELECT pseudo, password FROM users WHERE pseudo = :username AND password = :password");
+
+            $query->bindParam(':username', $username, PDO::PARAM_STR);
+            $query->bindParam(':password', $password, PDO::PARAM_STR, 40);
+
+            $query->execute();
+
+            $check = $query->fetchColumn();
+
+            if($check == false)
+            {
+                    $_SESSION['error'] = 'Pseudo ou mot de passe incorrect';
+            }
+            else
+            {
+                    $user = $query->fetchAll(PDO::FETCH_OBJ);
+                    $_SESSION['pseudo'] = $username;
+                    $_SESSION['level'] = $user->level;
+            }
+		}
 	}
 
 	class functions

@@ -1,5 +1,5 @@
 <div class="connexption">
-	<p><span class="register">S'inscrire</span> | <span class="login">Connexion</span></p>
+	<p><?php if(isset($_SESSION['pseudo'])){ echo "<span class='register'>Profil</span> | <span class='login' onclick='logout()'>Déconnexion</span>";  } else{ echo "<span class='register'>S'inscrire</span> | <span class='login'>Connexion</span>"; } ?></p>
 </div>
 <header class="header">
 	<div class="clickpop">
