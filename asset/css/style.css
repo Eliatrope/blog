@@ -454,8 +454,22 @@ a{
 	border-right:8px solid #181818;
 	z-index:9998;
 	display:none;
+	overflow-x:scroll;
+	overflow-y:visible;
 }
-.closelogisfil{
+.logisfil::-webkit-scrollbar{
+	display:none;
+}
+.logisfil::-moz-scrollbar{
+	display:none;
+}
+.logisfil::-o-scrollbar{
+	display:none;
+}
+.logisfil::scrollbar{
+	display:none;
+}
+/*.closelogisfil{
 	position:absolute;
 	width:40px;
 	height:40px;
@@ -469,7 +483,7 @@ a{
 	line-height:40px;
 	top:-10px;right:-25px;
 	cursor:pointer;
-}
+}*/
 .containeravatarlogisfil{
 	width:198px;
 	height:198px;
@@ -527,4 +541,94 @@ a{
 	font-style:italic;
 	font-size:14px;
 	width:200px;
+}
+.logisfil h6{
+	margin-top:10px;
+	margin-bottom:0;
+	margin-left:5px;
+	color:white;
+	font-size:16px;
+	font-family:Lora;
+	font-weight:normal;
+}
+.logisfil hr{
+	border:1px solid #181818;
+	margin:0;
+}
+.logisfil ul{
+	padding:0;
+	margin:0;
+	font-family:Lora;
+	font-size:30px;
+	list-style-type:none;
+}
+.logisfil ul li{
+	color:#181818;
+	text-align:center;
+	margin-top:15px;
+	margin-bottom:15px;
+	cursor:pointer;
+	transition:all 1s;
+}
+.logisfil ul li:hover{
+	color:white;
+	border-top:7px solid #181818;
+	border-bottom:7px solid #181818;
+}
+/*Le form*/
+.logisfil form{
+	font-family:Lora;
+	color:white;
+}
+.logisfil form label{
+	font-size:16px;
+	margin-top:10px;
+	display:block;
+	text-align:center;
+}
+.logisfil form input:nth-child(-n+8){
+	display:block;
+	width:100%;
+	background-color:black;
+	color:white;
+	margin-top:5px;
+	margin-bottom:4px;
+	border-top:1px solid #181818;
+	border-bottom:1px solid #181818;
+	border-left:1px solid transparent;
+	height:20px;
+	text-align:center;
+	outline-color:#181818;
+	font-size:10px;
+	transition:all .7s;
+}
+.logisfil form input:last-child{
+	display:block;
+	margin:10px auto 10px auto;
+	width:75px;
+	height:20px;
+	border-radius:2px;
+	border:1px solid #181818;
+	outline-color:#181818;
+	background-color:black;
+	color:white;
+	font-family:Lora;
+	font-size:10px;
+	text-align:center;
+	transition:all .7s;
+}
+.logisfil form input:last-child:hover{
+	background-color:white;
+	color:black;
+}
+.logisfil form input:nth-child(-n+8):focus{
+	background-color:white;
+	color:black;
+}
+.dejainscrit{
+	text-align:center;
+	color:white;
+	font-family:Lora;
+	font-size:16px;
+	cursor:pointer;
 }
